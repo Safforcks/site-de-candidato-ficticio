@@ -1,0 +1,54 @@
+.container {
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    background-image: url("../imagens/fond-grille-jaune-degrade.jpg");
+    background-position: center;
+    background-size: cover;
+    scroll-margin-top: 68px;
+}
+.formulario {
+    width: min(100%, 500px);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 15px;
+    border-radius: 15px;  
+    background-color: rgba(255, 253, 253, 0.50); 
+    backdrop-filter: blur(3px);    
+}
+.titulo {
+    text-align: center;
+    font-size: 36px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.formulario_sucesso {
+    border: 2px solid #27ae60;
+    background-color: rgba(39, 174, 96, 0.08);
+}
+.mensagem_sucesso {
+    text-align: center;
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.25);
+    animation: aparecer 0.4s ease;
+}
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

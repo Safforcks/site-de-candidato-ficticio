@@ -1,0 +1,90 @@
+.container {
+    background-image: url("../imagens/Cores.webp");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 68px;
+    padding: 40px 20px;
+}
+.titulo {
+    display: none;
+}
+.card {
+    width: min(100%, 1050px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 25px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    gap: 20px;
+    background-color: rgb(233, 225, 225);
+}
+.card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.432);
+}
+.imagem_candidato {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.233);
+    object-fit: cover;
+}
+.card_textos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    gap: 15px;
+}
+.texto_candidato {
+    text-align: justify;
+    text-indent: 40px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+    .titulo {
+        display: block;
+        font-size: 48px;
+        margin-bottom: 60px;
+        color: yellow;
+        text-shadow: 0 0 5px black;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+    .card {
+        flex-direction: row;
+        align-items: flex-start;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px black;
+    }
+    .card_textos {
+        flex-grow: 1;
+    }
+    .imagem_candidato {
+        max-width: 340px;
+        flex-basis: 340px;
+        flex-shrink: 0;
+        height: 380px;
+    }
+}
+@media (min-width: 1024px) {
+    .texto_candidato {
+        max-width: 800px;
+        font-size: 16px;
+    }
+}

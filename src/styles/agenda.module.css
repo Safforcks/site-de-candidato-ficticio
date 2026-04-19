@@ -1,0 +1,85 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 25px;
+    scroll-margin-top: 68px;
+    background: #f8f9fa;
+}
+.titulo {
+    text-align: center;
+    font-size: 48px;
+    margin: 20px auto;
+    color: #1a1a1a;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+.card {
+    width: min(100%, 405px);
+    min-height: 150px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(231, 76, 60, 0.3);
+}
+.texto, .texto_proximo {
+    font-size: 16px;
+    font-weight: 500;
+}
+.card_proximo {
+    width: min(100%, 405px);
+    min-height: 150px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.card_proximo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(39, 174, 96, 0.3);
+}
+.texto_dias {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+@media (min-width: 768px){
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 50px 30px;
+    }
+    .titulo {
+        grid-column: span 2;
+        font-size: 48px;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    .titulo {
+        grid-column: span 3;
+    }
+}
